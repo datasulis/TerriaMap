@@ -28,67 +28,45 @@ function RelatedMaps(props) {
             </p>
 
             <div className={classNames(PanelStyles.section, Styles.section)}>
-                <a target="_blank" href="http://nationalmap.gov.au/renewables/">
-                    <img className={Styles.image} src={require('../../wwwroot/images/aremi.jpg')}
-                         alt="AREMI"/>
+                <a target="_blank" href="http://strava.bathhacked.org/interact/">
+                    <img className={Styles.image} src={require('../../wwwroot/images/metro_map.png')}
+                         alt="Bath Strava Metro 2015"/>
                 </a>
 
-                <a target="_blank" className={Styles.link} href="http://nationalmap.gov.au/renewables/">AREMI</a>
+                <a target="_blank" className={Styles.link} href="http://strava.bathhacked.org/interact/">Bath Strava Metro 2015</a>
 
                 <p>
-                    AREMI provides access to Australian spatial data relevant to the Renewable Energy industry,
-                    sourced from Government, Industry and Research.
+                    A visualisation of Strava Metro data for the city of Bath during 2015. Created by
+                    <a href="https://twitter.com/azazell0?lang=en">Mark Owen</a>.
                 </p>
             </div>
 
             <div className={classNames(PanelStyles.section, Styles.section)}>
-                <a target="_blank" href="http://nationalmap.gov.au/northernaustralia/">
-                    <img className={Styles.image} src={require('../../wwwroot/images/northernaustralia.jpg')}
-
-                         alt="Northern Australia"/>
+                <a target="_blank" href="http://nadnerb.co.uk/HistoryMap/">
+                    <img className={Styles.image} src={require('../../wwwroot/images/history_map.png')}
+                         alt="History Map: Bath"/>
                 </a>
 
-                <a target="_blank" className={Styles.link} href="http://nationalmap.gov.au/northernaustralia/">Northern
-                    Australia</a>
+                <a target="_blank" className={Styles.link} href="http://nadnerb.co.uk/HistoryMap/">History Map: Bath</a>
 
                 <p>
-                    The Northern Australia NationalMap forms part of the Government's commitment to developing
-                    northern Australia by providing easy access to authoritative and other spatial data on northern
-                    Australia to governments, business and the public.
-
-                    More information on the Government's White Paper on Developing Northern Australia is available
-                    here: <a target="_blank" className={Styles.link} href="https://northernaustralia.dpmc.gov.au">
-                    https://northernaustralia.dpmc.gov.au</a>.
+                    A range of historical maps of Bath ranging from 1572 to 1942. Includes the 1885 Ordnance Survey
+                    map of Bath, which is the most detailed survey ever carried out. Created by
+                    <a href="https://twitter.com/_nadnerb">Brendan</a>.
                 </p>
             </div>
 
             <div className={classNames(PanelStyles.section, Styles.section)}>
-                <a target="_blank" href="http://neiiviewer.nicta.com.au">
-                    <img className={Styles.image} src={require('../../wwwroot/images/neii.jpg')}
-                         alt="NEII Viewer"/>
+                <a target="_blank" href="https://drive.google.com/open?id=1f4Ul606sRVzb8lZo883MjKcbVTY&usp=sharing">
+                    <img className={Styles.image} src={require('../../wwwroot/images/historical_bath_map.png')}
+                         alt="Historical Bath"/>
                 </a>
 
-                <a target="_blank" className={Styles.link} href="http://www.neii.gov.au/viewer/">NEII Viewer</a>
+                <a target="_blank" className={Styles.link} href="https://drive.google.com/open?id=1f4Ul606sRVzb8lZo883MjKcbVTY&usp=sharing">Historical Bath</a>
 
                 <p>
-                    The National Environmental Information Infrastructure (NEII) is an information platform designed
-                    to improve discovery, access and re-use of nationally significant environmental data. More
-                    information on the NEII is available here: <a target="_blank" className={Styles.link} href="http://neii.gov.au/data-viewer">
-                    neii.gov.au/data-viewer</a>.
-                </p>
-            </div>
-
-            <div className={classNames(PanelStyles.section, Styles.section)}>
-                <a target="_blank" href="http://map.aurin.org.au">
-                    <img className={Styles.image} src={require('../../wwwroot/images/aurin-map.jpg')}
-                         alt="AURIN Map"/>
-                </a>
-
-                <a target="_blank" className={Styles.link} href="http://map.aurin.org.au">AURIN Map</a>
-
-                <p>
-                    AURIN Map provides access to datasets on urban infrastructure for urban researchers, policy and
-                    decision makers.
+                    Explore some of the history of Bath via videos, art works, printed images and old photographs. Created by
+                    <a href="https://twitter.com/ldodds">Leigh Dodds</a>.
                 </p>
             </div>
         </MenuPanel>

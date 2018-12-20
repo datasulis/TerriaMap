@@ -1,58 +1,61 @@
 {
     /* Names of init files (in wwwroot/init), without the .json extension, to load by default */
     initializationUrls: [
-        "terria"
+        "bath"
     ],
     parameters: {
         googleUrlShortenerKey: null,
         googleAnalyticsKey: null,
         googleAnalyticsOptions: null,
+        bingMapsKey: "AtzA9aFqJhVWTQX5BeDCFfC5q4Nw8Wbri1c-Jnuuu6sEqNkM3J_7CjDvjvGEJsmz",
+        cesiumIonAccessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4NDc0MzJiMS0zODNkLTRiMGMtYTJhNC0zOTY5ZjRmZjkzZDgiLCJpZCI6NjEwNSwic2NvcGVzIjpbImFzciIsImdjIl0sImlhdCI6MTU0NTIzNzQ4MX0.-6_H41L-ES7YrCz9OQVSgjrl8Q6CQztXKWrjwPxefa0",
         /* Text that appears at the bottom of the map */
         disclaimer: {
-            text: "Disclaimer: This map must not be used for navigation or precise spatial analysis",
-            url: ""
+            text: "Disclaimer: This is a demo site created by Bath: Hacked",
+            url: "https://www.bathhacked.org"
         },
         /*
         // Text that will be added to any pages printed from your site.
         printDisclaimer:{
-            text:"Put your print disclaimer here.",
-            url: "#"
+            text: "Disclaimer: This is a demo site created by Bath: Hacked",
+            url: "https://www.bathhacked.org"
         },
         */
          
         // Pop-up disclaimer that will be shown at the start
         // The text of the disclaimer is in lib/Views/GlobalDisclaimer.html
-        // globalDisclaimer: {
-        //     confirmationRequired: false,
-        //     buttonTitle: "I agree",
-        //     title: "Disclaimer",
+        globalDisclaimer: {
+             confirmationRequired: true,
+             buttonTitle: "OK",
+             title: "Notice",
         //     // If the current browser location is not prod, or is dev, then show a "not the real site" warning.
         //     // The text of that is in lib/Views/DevelopmentDisclaimerPreamble.html
         //     //prodHostRegex: "gov.\\.au$",
         //     //devHostRegex: "\\b(staging|preview|test|dev)\\.",
-        //     enableOnLocalhost: true // If false, don't show this when running on localhost
-        // },
-        
-        /*
+             enableOnLocalhost: false // If false, don't show this when running on localhost
+        },
+
         developerAttribution: {
-            text: "Your organisation",
-            link: "http://www.example.com"
-        },*/
+            text: "Bath: Hacked",
+            link: "http://bathhacked.org"
+        },
+
         // This is used in various text messages. You should also set <title> in index.html
-        appName: "Terria Map",
+        appName: "WECA: Mapped",
 
         // See comments in lib/Views/global.scss for further information about customising colors, logos, fonts etc.
         brandBarElements: [
             "",
-            "<a target=\"_blank\" href=\"https://terria.io\"><img src=\"images/terria_logo.png\" height=\"52\" title=\"Version: {{version}}\" /></a>",
+            "<a target=\"_blank\" href=\"https://bathhacked.org\"><img src=\"images/weca_logo.png\" height=\"52\" title=\"Version: {{version}}\" /></a>",
             ""
         ],
         // Shown when things go wrong.
-        supportEmail: "help@example.com",
+        supportEmail: "leigh@bathhacked.org",
         // You probably shouldn't change this.
         proj4ServiceBaseUrl: "proj4def/",
         // Or this
-        feedbackUrl: "feedback",
+        //uncomment this to re-enable the feedback form.
+        //feedbackUrl: "feedback",
 
         // Default mobile viewer mode when loading the map for the first time on mobile platforms.
         // Options are: "3DTerrain", "3DSmooth", "2D"
