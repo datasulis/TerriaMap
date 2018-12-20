@@ -43,7 +43,7 @@ code {
 /* Not required for template or sticky footer method. */
 
 body {
-  color: #484848;
+  color: hsl(0,0%,29%);
 }
 
 .content {
@@ -95,7 +95,7 @@ ul {
 }
 
 .navbar-inverse {
-  background-color: #353B43;
+  background-color: hsl(0,0%,29%);
   border-color: #080808; 
 }
 
@@ -110,10 +110,10 @@ ul {
 }
 
 .navbar-inverse .navbar-nav > .active > a {
-  background-color: #49515c;
+  background-color: hsl(206,18%,37%);
 }
 .navbar-inverse .navbar-nav > .active > a:hover {
-  background-color: #49515c;
+  background-color: hsl(206,18%,37%);
 }
 
 .navbar-brand {
@@ -122,7 +122,6 @@ ul {
 }
 
 .navbar-brand img {
-  width: 140px;
 }
 
 
@@ -221,7 +220,7 @@ h2 > a {
 }
 
 .navbar-brand img {
-  width: 170px;
+  width: 100px;
 }
 
 .content {
