@@ -22,6 +22,7 @@ import GazetteerSearchProviderViewModel from 'terriajs/lib/ViewModels/GazetteerS
 import GnafSearchProviderViewModel from 'terriajs/lib/ViewModels/GnafSearchProviderViewModel.js';
 import defined from 'terriajs-cesium/Source/Core/defined';
 import render from './lib/Views/render';
+import ViewerMode from 'terriajs/lib/Models/ViewerMode';
 
 // Register all types of catalog members in the core TerriaJS.  If you only want to register a subset of them
 // (i.e. to reduce the size of your application if you don't actually use them all), feel free to copy a subset of
@@ -90,6 +91,7 @@ terria.start({
         //var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
         var allBaseMaps = globalBaseMaps;
         selectBaseMap(terria, allBaseMaps, 'Bing Maps Aerial with Labels', true);
+        terria.viewerMode=ViewerMode.Leaflet;
 
         // Show a modal disclaimer before user can do anything else.
         if (defined(terria.configParameters.globalDisclaimer)) {
