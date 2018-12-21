@@ -1,0 +1,73 @@
+{
+  "initialCamera": {
+    "north": 51.620307,
+    "east": -2.154709,
+    "south": 51.286131,
+    "west": -2.830368
+  },
+  "homeCamera": {
+    "north": 51.620307,
+    "east": -2.154709,
+    "south": 51.286131,
+    "west": -2.830368
+  },
+  "catalog": [
+    {
+      "type": "group",
+      "id": "boundaries",
+      "name": "Boundaries",
+      "items": [
+        {
+          "type": "geojson",
+          "id": "http://statistics.data.gov.uk/doc/statistical-geography/E06000022",
+          "url": "http://statistics.data.gov.uk/boundaries/E06000022.json",
+          "name": "Bath and North East Somerset - Unitary Authority",
+          "description": "Boundary for B&NES"
+        },
+        {
+          "type": "geojson",
+          "id": "http://statistics.data.gov.uk/boundaries/E06000025.json",
+          "url": "http://statistics.data.gov.uk/boundaries/E06000025.json",
+          "name": "South Gloucestershire - Unitary Authority",
+          "description": "Boundary for South Gloucestershire"
+        },
+        {
+          "type": "geojson",
+          "id": "http://statistics.data.gov.uk/boundaries/E06000023.json",
+          "url": "http://statistics.data.gov.uk/boundaries/E06000023.json",
+          "name": "City of Bristol - Unitary Authority",
+          "description": "Boundary for City of Bristol"
+        },
+        {
+          "type": "composite",
+          "id": "weca",
+          "name": "West of England Combined Authority",
+          "description": "Composite boundary for WECA",
+          "items": [
+            {
+              "type": "geojson",
+              "id": "http://statistics.data.gov.uk/doc/statistical-geography/E06000022",
+              "url": "http://statistics.data.gov.uk/boundaries/E06000022.json",
+              "name": "Bath and North East Somerset - Unitary Authority",
+              "description": "Boundary for B&NES"
+            },
+            {
+              "type": "geojson",
+              "id": "http://statistics.data.gov.uk/boundaries/E06000025.json",
+              "url": "http://statistics.data.gov.uk/boundaries/E06000025.json",
+              "name": "South Gloucestershire - Unitary Authority",
+              "description": "Boundary for South Gloucestershire"
+            },
+            {
+              "type": "geojson",
+              "id": "http://statistics.data.gov.uk/boundaries/E06000023.json",
+              "url": "http://statistics.data.gov.uk/boundaries/E06000023.json",
+              "name": "City of Bristol - Unitary Authority",
+              "description": "Boundary for City of Bristol"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

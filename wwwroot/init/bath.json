@@ -1,285 +1,2227 @@
 {
-  "initialCamera": {
-    "north": 51.620307,
-    "east": -2.154709,
-    "south": 51.286131,
-    "west": -2.830368
-  },
-  "homeCamera": {
-    "north": 51.620307,
-    "east": -2.154709,
-    "south": 51.286131,
-    "west": -2.830368
-  },
   "catalog": [
     {
       "type": "group",
-      "id": "boundaries",
-      "name": "Boundaries",
-      "items": [
-        {
-          "type": "geojson",
-          "id": "http://statistics.data.gov.uk/doc/statistical-geography/E06000022",
-          "url": "http://statistics.data.gov.uk/boundaries/E06000022.json",
-          "name": "Bath and North East Somerset - Unitary Authority",
-          "description": "Boundary for B&NES"
-        },
-        {
-          "type": "geojson",
-          "id": "http://statistics.data.gov.uk/boundaries/E06000025.json",
-          "url": "http://statistics.data.gov.uk/boundaries/E06000025.json",
-          "name": "South Gloucestershire - Unitary Authority",
-          "description": "Boundary for South Gloucestershire"
-        },
-        {
-          "type": "geojson",
-          "id": "http://statistics.data.gov.uk/boundaries/E06000023.json",
-          "url": "http://statistics.data.gov.uk/boundaries/E06000023.json",
-          "name": "City of Bristol - Unitary Authority",
-          "description": "Boundary for City of Bristol"
-        },
-        {
-          "type": "composite",
-          "id": "weca",
-          "name": "West of England Combined Authority",
-          "description": "Composite boundary for WECA",
-          "items": [
-            {
-              "type": "geojson",
-              "id": "http://statistics.data.gov.uk/doc/statistical-geography/E06000022",
-              "url": "http://statistics.data.gov.uk/boundaries/E06000022.json",
-              "name": "Bath and North East Somerset - Unitary Authority",
-              "description": "Boundary for B&NES"
-            },
-            {
-              "type": "geojson",
-              "id": "http://statistics.data.gov.uk/boundaries/E06000025.json",
-              "url": "http://statistics.data.gov.uk/boundaries/E06000025.json",
-              "name": "South Gloucestershire - Unitary Authority",
-              "description": "Boundary for South Gloucestershire"
-            },
-            {
-              "type": "geojson",
-              "id": "http://statistics.data.gov.uk/boundaries/E06000023.json",
-              "url": "http://statistics.data.gov.uk/boundaries/E06000023.json",
-              "name": "City of Bristol - Unitary Authority",
-              "description": "Boundary for City of Bristol"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "group",
-      "id": "banes-geographic-data",
-      "name": "Bath: Hacked B&NES Geographic Data Collection",
-      "items": []
-    },
-    {
-      "type": "group",
-      "id": "bath",
-      "name": "Bath & North East Somerset",
-      "description": "Geospatial data about Bath & North East Somerset",
+      "id": "bath-hacked",
+      "name": "Bath: Hacked Geospatial Data",
+      "description": "Geospatial data curated by [Bath: Hacked](https://bathhacked.org)",
       "items": [
         {
           "type": "socrata",
           "id": "bh-socrata",
           "name": "Bath: Hacked Socrata datastore",
-          "description": "A subset of the geospatial data available in the Bath: Hacked data store",
+          "description": "A subset of the geospatial data available in the [Bath: Hacked data store](https://data.bathhacked.org)",
           "url": "https://data.bathhacked.org"
         },
         {
           "type": "group",
-          "id": "banes-wms",
-          "name": "B&NES WMS/INSPIRE services",
-          "description": "Geospatial data directly published by B&NES council",
+          "id": "banes-geographic-data",
+          "name": "Bath: Hacked B&NES Geographic Data Collection",
+          "description": "A collection of geospatial datasets relating to Bath & North East Somerset collected by Bath: Hacked",
+          "info": [
+            {
+              "name": "Source",
+              "content": "[Bath: Hacked Geospatial Data Github Repository](https://github.com/BathHacked/banes-geographic-data)"
+            }
+          ],
           "items": [
             {
-              "type": "wms-getCapabilities",
-              "dataCustodian": "B&NES",
-              "id": "48667-wms",
-              "name": "CIL Retail Charging Zones (WMS, broken)",
-              "description": "BROKEN",
-              "itemProperties": {
-                "parameters": {
-                  "login": "fa22a827-09da-4ac1-da01-5b1bd5c22dee",
-                  "password": "b231fmb2"
+              "type": "geojson",
+              "id": "ne_national_trails",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ne_national_trails.geojson",
+              "name": "National Trails",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "© Natural England copyright. Contains Ordnance Survey data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Natural England Licence](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/409507/NE-terms-of-use.pdf)"
                 }
-              },
-              "url": "http://feeds.getmapping.com/48667.wmsx?service=wms&version=1.3.0&request=getcapabilities&login=fa22a827-09da-4ac1-da01-5b1bd5c22dee&password=b231fmb2"
+              ],
+              "dataCustodian": "[Natural England](https://www.gov.uk/government/organisations/natural-england)"
             },
             {
-              "type": "wms-getCapabilities",
-              "dataCustodian": "B&NES",
-              "id": "33188-wms",
-              "name": "Air Quality Monitoring Stations (WMS, broken)",
-              "description": "BROKEN",
-              "itemProperties": {
-                "parameters": {
-                  "login": "c1387c7d-7660-47c4-95da-457bc2631cf4",
-                  "password": "sk64k5k0"
+              "type": "geojson",
+              "id": "ofcom_broadband_2013",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ofcom_broadband_2013.geojson",
+              "name": "Ofcom Broadband Survey 2013",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Data provided by Ofcom. Contains OS data (c) Crown copyright 2015. Contains Royal Mail data (c) copyright and database right 2015"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
                 }
-              },
-              "url": "https://feeds.getmapping.com/33188.wmsx?service=wms&version=1.3.0&request=getcapabilities&login=c1387c7d-7660-47c4-95da-457bc2631cf4&password=sk64k5k0"
+              ],
+              "dataCustodian": "[Office of Communications](https://www.ofcom.org.uk/home)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_circuit_of_bath_walk",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_circuit_of_bath_walk.geojson",
+              "name": "Walking routes - circuit of Bath",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_community_agriculture",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_community_agriculture.geojson",
+              "name": "Community agriculture",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_aq_stations",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_aq_stations.geojson",
+              "name": "Air Quality Monitoring Stations",
+              "description": "Continuous air pollution monitoring stations within Bath & North East Somerset area. These sites provide hourly monitoring data for nitrogen dioxide or particulate matter for comparison with the Government's air quality objectives.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_gss_parks_recreation",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_gss_parks_recreation.geojson",
+              "name": "Parks & recreational areas",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_place_names",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_place_names.geojson",
+              "name": "Place names",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_rail_track",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_rail_track.geojson",
+              "name": "Rail tracks",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_car_charging_point",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_car_charging_point.geojson",
+              "name": "Car charging points",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_community_gardens",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_community_gardens.geojson",
+              "name": "Community gardens",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "defra_rofrs",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/defra_rofrs.geojson",
+              "name": "Risk of Flooding from Rivers & Sea",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Data provided by Department for the Environment, Food & Rural Affairs"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Department of Environment, Food & Rural Affairs](https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs)"
+            },
+            {
+              "type": "geojson",
+              "id": "ne_local_nature_reserves",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ne_local_nature_reserves.geojson",
+              "name": "Local nature reserves",
+              "description": "Local Nature Reserves (LNRs) are a statutory designation made under Section 21 of the National Parks and Access to the Countryside Act 1949 by principal local authorities.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "© Natural England copyright. Contains Ordnance Survey data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Natural England Licence](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/409507/NE-terms-of-use.pdf)"
+                }
+              ],
+              "dataCustodian": "[Natural England](https://www.gov.uk/government/organisations/natural-england)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_greenspace_access_point",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_greenspace_access_point.geojson",
+              "name": "Greenspace access points",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "ne_aonb",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ne_aonb.geojson",
+              "name": "Areas of Outstanding Natural Beauty",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "© Natural England copyright. Contains Ordnance Survey data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Natural England Licence](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/409507/NE-terms-of-use.pdf)"
+                }
+              ],
+              "dataCustodian": "[Natural England](https://www.gov.uk/government/organisations/natural-england)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_grit_bins",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_grit_bins.geojson",
+              "name": "Grit bins",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_landscharareas",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_landscharareas.geojson",
+              "name": "Rural landscape character areas",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_cil_residential_cz",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_cil_residential_cz.geojson",
+              "name": "CIL Residential Charging Zones",
+              "description": "Community Infrastructure Levy (CIL) Charging Zones maps for new development in Bath & North East Somerset. These identify the locations and boundaries to which the residential and non-residential CIL charges apply.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_community_supported_agriculture",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_community_supported_agriculture.geojson",
+              "name": "Community supported agriculture",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_burial_grounds",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_burial_grounds.geojson",
+              "name": "Burial grounds",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "bh_accessible_bath",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/bh_accessible_bath.geojson",
+              "name": "Accessible bath",
+              "description": "Snapshot of data collected by [Accessible Bath][https://accessiblebath.org] project",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "© OpenStreetMap contributors"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Database Licence](https://opendatacommons.org/licenses/odbl/)"
+                }
+              ],
+              "dataCustodian": "[Bath: Hacked](https://bathhacked.org)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_smoke_control_areas",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_smoke_control_areas.geojson",
+              "name": "Smoke control areas",
+              "description": "Areas within Bath & North East Somerset where smoke control legislation applies. Within these areas you are required to either burn approved smokeless fuels or require an appliance which has been approved by DEFRA as being smoke free. Areas declared between 1980 and 1994.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_gdslp_2007",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_gdslp_2007.geojson",
+              "name": "General Development Sites Local Plan 2007 Policy GDS1",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "ne_sssi",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ne_sssi.geojson",
+              "name": "Sites of Special Scientific Interest",
+              "description": "SSSI are the finest sites for wildlife and natural features in England, supporting many characteristic, rare and endangered species, habitats and natural features the land notified as an SSSI under the Wildlife and Countryside Act (1981).",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "© Natural England copyright. Contains Ordnance Survey data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Natural England Licence](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/409507/NE-terms-of-use.pdf)"
+                }
+              ],
+              "dataCustodian": "[Natural England](https://www.gov.uk/government/organisations/natural-england)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_gp_surgeries",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_gp_surgeries.geojson",
+              "name": "GP surgeries",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_park_litter_bin",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_park_litter_bin.geojson",
+              "name": "Park litter bin",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "ons_wmc_2014",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ons_wmc_2014.geojson",
+              "name": "2014 Westminster Constituencies",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains National Statistics data © Crown copyright and database right 2016. Contains OS data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Office for National Statistics](https://www.ons.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "ne_ag_landc_p1988",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ne_ag_landc_p1988.geojson",
+              "name": "Agricultural Land Classification",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "© Natural England copyright. Contains Ordnance Survey data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Natural England Licence](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/409507/NE-terms-of-use.pdf)"
+                }
+              ],
+              "dataCustodian": "[Natural England](https://www.gov.uk/government/organisations/natural-england)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_residents_parking_zones",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_residents_parking_zones.geojson",
+              "name": "Residents Parking Zones",
+              "description": "Areas where residents parking permits are in operation",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_sscs_2014",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_sscs_2014.geojson",
+              "name": "Strategic Site Allocations Core Strategy 2014 Policies B3A KE3A KE4A RA5",
+              "description": "Core Strategy adopted 2014 Policies B3A KE3A KE4A RA5. Defines the boundary of large strategic sites allocated principally for residential development on the edge of Bath, Keynsham and Whitchurch.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_aqma_bath_major_roads",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_aqma_bath_major_roads.geojson",
+              "name": "Air Quality Management Area - major roads",
+              "description": "Air Quality Management Areas: Areas within Bath & North East Somerset which exceed the Government's air quality standards for nitrogen dioxide. Bath, declared July 2010. See also Keynsham and Saltford AQMA",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_cil_hotel_cz",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_cil_hotel_cz.geojson",
+              "name": "CIL Hotel Charging Zone",
+              "description": "Community Infrastructure Levy (CIL) Charging Zones maps for new development in Bath & North East Somerset. These identify the locations and boundaries to which the residential and non-residential CIL charges apply.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_park_dog_bin",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_park_dog_bin.geojson",
+              "name": "Dog waste disposal bins",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_greenspace_site",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_greenspace_site.geojson",
+              "name": "Greenspace sites",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "he_scheduled_monuments",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/he_scheduled_monuments.geojson",
+              "name": "Scheduled Monuments",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "© Historic England 2017. Contains Ordnance Survey data © Crown copyright and database right 2017. The Historic England GIS Data contained in this material was obtained on 2017-10-05. The most publicly available up to date Historic England GIS Data can be obtained from HistoricEngland.org.uk."
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Historic England Licence](https://github.com/BathHacked/banes-geographic-data/blob/master/he_listed_buildings_licence.pdf)"
+                }
+              ],
+              "dataCustodian": "[Historic England](https://historicengland.org.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "ons_census_2011_ward",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ons_census_2011_ward.geojson",
+              "name": "2011 Census by Ward",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains National Statistics data © Crown copyright and database right 2016. Contains OS data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Office for National Statistics](https://www.ons.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_gss_churchyards_cem",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_gss_churchyards_cem.geojson",
+              "name": "Churchyards & cemeteries",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "ne_special_protection_areas",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ne_special_protection_areas.geojson",
+              "name": "Special protection areas",
+              "description": "A Special Protection Area (SPA) is the land classified under Directive 79/409 on the Conservation of Wild Birds.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "© Natural England copyright. Contains Ordnance Survey data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Natural England Licence](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/409507/NE-terms-of-use.pdf)"
+                }
+              ],
+              "dataCustodian": "[Natural England](https://www.gov.uk/government/organisations/natural-england)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_park_bbq_disposal",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_park_bbq_disposal.geojson",
+              "name": "BBQ disposal bins",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_city_farms",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_city_farms.geojson",
+              "name": "City farms",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_park_seats_and_benches",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_park_seats_and_benches.geojson",
+              "name": "Park seats and benches",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_green_belt",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_green_belt.geojson",
+              "name": "Green belt",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_mineral_consultation_areas",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_mineral_consultation_areas.geojson",
+              "name": "Mineral Consultation Areas",
+              "description": "Minerals Consultation Areas are defined to ensure that the Mineral Planning Authority is informed of significant development proposals which may adversely affect minerals resources and has the opportunity to comment upon or oppose them. Local Plan adopted 2007 (Policy M.2)",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_surface_water_line",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_surface_water_line.geojson",
+              "name": "Surface water - lines",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_education_colleges",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_education_colleges.geojson",
+              "name": "Colleges",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_functional_sites",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_functional_sites.geojson",
+              "name": "Functional sites",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "nt_bath_skyline",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/nt_bath_skyline.geojson",
+              "name": "Walking routes - Bath skylineroute",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Data provided by National Trust"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[National Trust](https://www.nationaltrust.org.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_aqma_saltford",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_aqma_saltford.geojson",
+              "name": "Air Quality Management Area - Saltford",
+              "description": "Air Quality Management Areas: Areas within Bath & North East Somerset which exceed the Government's air quality standards for nitrogen dioxide. Saltford, declared July 201. See also Bath and Keynsham AQMA",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_gss_natural_greenspace",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_gss_natural_greenspace.geojson",
+              "name": "Natural greenspace",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_prow_somerset",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_prow_somerset.geojson",
+              "name": "Public rights of way in Somerset",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_litter_bins",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_litter_bins.geojson",
+              "name": "Roadside Litter Bins",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_community_orchards",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_community_orchards.geojson",
+              "name": "Community orchards",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_gss_allotments",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_gss_allotments.geojson",
+              "name": "Allotments - B&NES",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "ne_crow_s15_land",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ne_crow_s15_land.geojson",
+              "name": "Countryside and Rights of Way Act 2000 - Section 15 Land",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "© Natural England copyright. Contains Ordnance Survey data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Natural England Licence](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/409507/NE-terms-of-use.pdf)"
+                }
+              ],
+              "dataCustodian": "[Natural England](https://www.gov.uk/government/organisations/natural-england)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_road_roundabout",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_road_roundabout.geojson",
+              "name": "Roads & roundabouts",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "ons_census_2011_lsoa",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ons_census_2011_lsoa.geojson",
+              "name": "2011 Census by Lower Super Output Area",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains National Statistics data © Crown copyright and database right 2016. Contains OS data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Office for National Statistics](https://www.ons.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "ons_oac_2011",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ons_oac_2011.geojson",
+              "name": "2011 Area Classifications",
+              "description": "Area classifications group together geographic areas according to key characteristics common to the population in that grouping. These groupings are called clusters and are derived using census data. The area classifications are hierarchical classifications, consisting of three tiers: Supergroups, Groups and Subgroups.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains National Statistics data © Crown copyright and database right 2016. Contains OS data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Office for National Statistics](https://www.ons.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_terrain50",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_terrain50.geojson",
+              "name": "Terrain 50",
+              "description": "Terrain contours with post spacing of 50m	& vertical interval of 10m.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_important_buildings",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_important_buildings.geojson",
+              "name": "Important buildings",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_wraalp_2007",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_wraalp_2007.geojson",
+              "name": "Waterside Recreation Activity Areas Local Plan 2007 Policy SR10",
+              "description": "Local Plan adopted 2007 Policy SR10. Defines the boundaries of areas where recreational development associated with the waterways may be acceptable.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "olev_ncpr_charge_points",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/olev_ncpr_charge_points.geojson",
+              "name": "Car charging points - National Charge Point Registry",
+              "description": "Publicly Accessible PiV (plugged-in vehicle) Charge Points within the UK.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Data provided by Office for Low Emission Vehicles"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Office for Low Emission Vehicles](https://www.gov.uk/government/organisations/office-for-low-emission-vehicles)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_education_special_schools",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_education_special_schools.geojson",
+              "name": "Special schools",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_civic_amenity",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_civic_amenity.geojson",
+              "name": "Civic Amenity Sites",
+              "description": "Recycling Centres offering recycling and waste disposal services for local residents.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_gss_outdoorsport_private",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_gss_outdoorsport_private.geojson",
+              "name": "Private outdoor sport areas",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_park_picnic_tables",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_park_picnic_tables.geojson",
+              "name": "Park picnic tables",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_settlements",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_settlements.geojson",
+              "name": "Settlements",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_cil_wr",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_cil_wr.geojson",
+              "name": "CIL Bath Western Riverside",
+              "description": "Community Infrastructure Levy (CIL) Charging Zones maps for new development in Bath and North East Somerset. These identify the locations and boundaries to which the residential and non-residential CIL charges apply.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_defibrillators",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_defibrillators.geojson",
+              "name": "Defibrillators",
+              "description": "**Note**: this dataset is known to be out of date. Do not use in an emergency!",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "ne_ancient_woodland",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ne_ancient_woodland.geojson",
+              "name": "Ancient woodlands",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "© Natural England copyright. Contains Ordnance Survey data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Natural England Licence](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/409507/NE-terms-of-use.pdf)"
+                }
+              ],
+              "dataCustodian": "[Natural England](https://www.gov.uk/government/organisations/natural-england)"
+            },
+            {
+              "type": "geojson",
+              "id": "ons_imd_2015",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ons_imd_2015.geojson",
+              "name": "English Indices of deprivation 2015",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains National Statistics data © Crown copyright and database right 2016. Contains OS data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Office for National Statistics](https://www.ons.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_aqma_keynsham",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_aqma_keynsham.geojson",
+              "name": "Air Quality Management Area - Keynsham",
+              "description": "Air Quality Management Areas: Areas within Bath & North East Somerset which exceed the Government's air quality standards for nitrogen dioxide. Keynsham, declared July 2010. See also Bath and Saltford AQMA",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_park_recycling_bin",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_park_recycling_bin.geojson",
+              "name": "Park recycling bins",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_gss_outdoorsport_fixed",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_gss_outdoorsport_fixed.geojson",
+              "name": "Fixed outdoor sport areas",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_rail_tunnel",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_rail_tunnel.geojson",
+              "name": "Rail tunnels",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_psfps5",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_psfps5.geojson",
+              "name": "Primary Shopping Frontage Policy S5",
+              "description": "Local Plan Policy S5 adopted 2007. Primary frontages protect retail uses within the areas defined in Bath central shopping area and Keynsham, Midsomer Norton and Radstock town centres",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_tpos",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_tpos.geojson",
+              "name": "Tree Preservation Orders",
+              "description": "A Tree Preservation Order is an order made by a local planning authority (LPA ) to protect specific trees, groups of trees or woodlands when it is deemed to be expedient in the interests of amenity. An Order prohibits the cutting down; topping; lopping; uprooting; wilful damage or wilful destruction of trees without the local planning authority's written consent.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "ne_agricultural_land_class",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ne_agricultural_land_class.geojson",
+              "name": "Agricultural Land Classification Post 1988",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "© Natural England copyright. Contains Ordnance Survey data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Natural England Licence](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/409507/NE-terms-of-use.pdf)"
+                }
+              ],
+              "dataCustodian": "[Natural England](https://www.gov.uk/government/organisations/natural-england)"
+            },
+            {
+              "type": "geojson",
+              "id": "decc_dom_gas_pc_2013",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/decc_dom_gas_pc_2013.geojson",
+              "name": "Domestic Gas Consumption",
+              "description": "Postcode level gas estimates: 2013 (experimental)",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Data provided by Department of Energy & Climate Change"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Department of Energy & Climate Change](https://www.gov.uk/government/organisations/department-of-energy-climate-change)"
+            },
+            {
+              "type": "geojson",
+              "id": "defra_noise_rd_lq16",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/defra_noise_rd_lq16.geojson",
+              "name": "Noise mapping - Roads (0700-2300)",
+              "description": "Annual average road noise levels for the 16-hour period between 0700 – 2300",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Data provided by Department for the Environment, Food & Rural Affairs"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Department of Environment, Food & Rural Affairs](https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_rail_station",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_rail_station.geojson",
+              "name": "Railway stations",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_cil_retail_cz",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_cil_retail_cz.geojson",
+              "name": "CIL Retail Charging Zone",
+              "description": "Community Infrastructure Levy (CIL) Charging Zones maps for new development in Bath and North East Somerset. These identify the locations and boundaries to which the residential and non-residential CIL charges apply.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "dclg_greenbelt_2013_14",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/dclg_greenbelt_2013_14.geojson",
+              "name": "Green Belt boundaries (2013-2014)",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2013-2014\nData provided by Department for Communities & Local Government"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Department of Communities & Local Government](https://www.gov.uk/government/organisations/ministry-of-housing-communities-and-local-government)"
+            },
+            {
+              "type": "geojson",
+              "id": "ons_lsoa_2011",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ons_lsoa_2011.geojson",
+              "name": "2011 Lower Super Output Areas (LSOAs)",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains National Statistics data © Crown copyright and database right 2016. Contains OS data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Office for National Statistics](https://www.ons.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "he_listed_buildings",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/he_listed_buildings.geojson",
+              "name": "Listed buildings",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "© Historic England 2017. Contains Ordnance Survey data © Crown copyright and database right 2017. The Historic England GIS Data contained in this material was obtained on 2017-10-05. The most publicly available up to date Historic England GIS Data can be obtained from HistoricEngland.org.uk."
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Historic England Licence](https://github.com/BathHacked/banes-geographic-data/blob/master/he_listed_buildings_licence.pdf)"
+                }
+              ],
+              "dataCustodian": "[Historic England](https://historicengland.org.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_postcodes",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_postcodes.geojson",
+              "name": "Postcodes",
+              "description": "Postcode centroids within BANES, with administrative area lookup.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "ons_census_2011_oa",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ons_census_2011_oa.geojson",
+              "name": "2011 Census by Output Area",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains National Statistics data © Crown copyright and database right 2016. Contains OS data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Office for National Statistics](https://www.ons.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_tpos",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_tpos.geojson",
+              "name": "Tree preservation orders & TPO areas",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "defra_noise_rl_lngt",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/defra_noise_rl_lngt.geojson",
+              "name": "Noise mapping - night time rail noise",
+              "description": "Night time annual average rail noise level results in dB, where night is defined as 2300 - 0700.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Data provided by Department for the Environment, Food & Rural Affairs"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Department of Environment, Food & Rural Affairs](https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_allotments",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_allotments.geojson",
+              "name": "Allotments - Bath",
+              "description": "Allotments owned and managed by Bath and North East Somerset Council.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_woodland",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_woodland.geojson",
+              "name": "Woodlands",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "ne_crow_access_layer",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ne_crow_access_layer.geojson",
+              "name": "Countryside and Rights of Way Act 2000",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "© Natural England copyright. Contains Ordnance Survey data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Natural England Licence](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/409507/NE-terms-of-use.pdf)"
+                }
+              ],
+              "dataCustodian": "[Natural England](https://www.gov.uk/government/organisations/natural-england)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_surface_water_area",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_surface_water_area.geojson",
+              "name": "Surface water - areas",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_conservation_ar",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_conservation_ar.geojson",
+              "name": "Conservation areas",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_libraries",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_libraries.geojson",
+              "name": "Libraries",
+              "description": "Libraries within Bath and North East Somerset Council",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_wedding_venues",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_wedding_venues.geojson",
+              "name": "Wedding venues",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "ne_special_areas_conservation",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ne_special_areas_conservation.geojson",
+              "name": "Special Areas of Conservation",
+              "description": "A Special Area of Conservation (SAC) is the land designated under Directive 92/43/EEC on the Conservation of Natural Habitats and of Wild Fauna and Flora.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "© Natural England copyright. Contains Ordnance Survey data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Natural England Licence](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/409507/NE-terms-of-use.pdf)"
+                }
+              ],
+              "dataCustodian": "[Natural England](https://www.gov.uk/government/organisations/natural-england)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_prow_bath",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_prow_bath.geojson",
+              "name": "Public rights of way in Bath",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_boundary",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_boundary.geojson",
+              "name": "B&NES Boundary",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "ons_wz_2011",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ons_wz_2011.geojson",
+              "name": "2011 Workplace Zones",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains National Statistics data © Crown copyright and database right 2016. Contains OS data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Office for National Statistics](https://www.ons.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "defra_noise_rl_lden",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/defra_noise_rl_lden.geojson",
+              "name": "Noise mapping - rail noise",
+              "description": "24 hour annual average rail noise level with separate weightings for the evening and night periods.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Data provided by Department for the Environment, Food & Rural Affairs"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Department of Environment, Food & Rural Affairs](https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs)"
+            },
+            {
+              "type": "geojson",
+              "id": "ofcom_bb_pc_2016",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ofcom_bb_pc_2016.geojson",
+              "name": "Broadband Survey June 2016",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Data provided by Ofcom. Contains OS data (c) Crown copyright 2015. Contains Royal Mail data (c) copyright and database right 2015"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Office of Communications](https://www.ofcom.org.uk/home)"
+            },
+            {
+              "type": "geojson",
+              "id": "ons_oa_2011",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ons_oa_2011.geojson",
+              "name": "2011 Output Areas (OAs)",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains National Statistics data © Crown copyright and database right 2016. Contains OS data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Office for National Statistics](https://www.ons.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_parishes",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_parishes.geojson",
+              "name": "Parishes",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_education_secondary_schools",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_education_secondary_schools.geojson",
+              "name": "Secondary schools",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_gss_playspace_youth",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_gss_playspace_youth.geojson",
+              "name": "Play spaces for youths",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_roads",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_roads.geojson",
+              "name": "Roads",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_gss_playspace_children",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_gss_playspace_children.geojson",
+              "name": "Play spaces for children",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "defra_noise_rd_lngt",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/defra_noise_rd_lngt.geojson",
+              "name": "Noise mapping - road night-time",
+              "description": "Night time annual average road noise level results in dB, where night is defined as 2300 - 0700.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Data provided by Department for the Environment, Food & Rural Affairs"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Department of Environment, Food & Rural Affairs](https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_electricity_lines",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_electricity_lines.geojson",
+              "name": "Electricity lines",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "os_buildings",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/os_buildings.geojson",
+              "name": "Buildings",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright [and database right] 2017"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Ordnance Survey](https://www.ordnancesurvey.co.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_llfa_assets",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_llfa_assets.geojson",
+              "name": "Lead Local Flood Authority (LLFA) Register of Assets (Line Data)",
+              "description": "Lead Local Flood Authority (LLFA) Register of assets associated with flood risk (Line Data) : to be used in conjunction with LLFA point and LLFA polygon datasets.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_education_universities",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_education_universities.geojson",
+              "name": "Universities",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_gss_outdoorsport_pitches",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_gss_outdoorsport_pitches.geojson",
+              "name": "Outdoorsport pitches",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_local_shops",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_local_shops.geojson",
+              "name": "Local shops",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_inspire_prslp_2007",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_inspire_prslp_2007.geojson",
+              "name": "Protected Recreational Sites Local Plan 2007 Policy SR1A",
+              "description": "Local Plan adopted 2007 Policy SR1A. Defines the boundaries of protected recreational open space throughout the District, including that not currently available for public use such as some school play.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[INSPIRE Licence](https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_gss_education_greenspace",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_gss_education_greenspace.geojson",
+              "name": "Education greenspace",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_river_rescue_cabinets",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_river_rescue_cabinets.geojson",
+              "name": "River rescue cabinets",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "defra_noise_rl_lq16",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/defra_noise_rl_lq16.geojson",
+              "name": "Noise mapping - Rail (0700-2300)",
+              "description": "Annual average rail noise levels for the 16-hour period between 0700 – 2300.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Data provided by Department for the Environment, Food & Rural Affairs"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Department of Environment, Food & Rural Affairs](https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs)"
+            },
+            {
+              "type": "geojson",
+              "id": "defra_noise_rd_lden",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/defra_noise_rd_lden.geojson",
+              "name": "Noise mapping - roads",
+              "description": "24 hour annual average road noise level with separate weightings for the evening and night periods.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Data provided by Department for the Environment, Food & Rural Affairs"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Department of Environment, Food & Rural Affairs](https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs)"
+            },
+            {
+              "type": "geojson",
+              "id": "ons_ward_2011",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ons_ward_2011.geojson",
+              "name": "2011 Wards",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains National Statistics data © Crown copyright and database right 2016. Contains OS data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Office for National Statistics](https://www.ons.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "ons_msoa_2011",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/ons_msoa_2011.geojson",
+              "name": "2011 Middle Super Output Areas (MSOAs)",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains National Statistics data © Crown copyright and database right 2016. Contains OS data © Crown copyright and database right 2016"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Office for National Statistics](https://www.ons.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "banes_gss_amenity_grass",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/banes_gss_amenity_grass.geojson",
+              "name": "Amenity grass areas",
+              "description": "",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Contains OS data © Crown copyright and database right 2016-2017. Data provided by Bath & North East Somerset Council"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Bath & North East Somerset Council](http://www.bathnes.gov.uk/)"
+            },
+            {
+              "type": "geojson",
+              "id": "decc_dom_elec_pc_2013",
+              "url": "https://raw.githubusercontent.com/BathHacked/banes-geographic-data/master/decc_dom_elec_pc_2013.geojson",
+              "name": "Domestic Electricity Consumption",
+              "description": "Domestic electricity consumption 2013 by postcode.",
+              "info": [
+                {
+                  "name": "Attribution",
+                  "content": "Data provided by Department of Energy & Climate Change"
+                },
+                {
+                  "name": "Licence",
+                  "content": "[Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+                }
+              ],
+              "dataCustodian": "[Department of Energy & Climate Change](https://www.gov.uk/government/organisations/department-of-energy-climate-change)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "group",
-      "id": "bristol",
-      "name": "Bristol Council",
-      "description": "Geospatial data published by Bristol City Council",
-      "items": [
-        {
-          "type": "wfs-getCapabilities",
-          "id": "bristol-open-data-wfs",
-          "name": "Bristol Open Data Portal",
-          "description": "Geospatial datasets published in the Bristol Open Data Portal. Accessed via the WFS API. **Note**: some of these layers appear to have incorrect data",
-          "url": "https://opendata.bristol.gov.uk/api/wfs?service=wfs&request=GetCapabilities"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "id": "https://data.gov.uk/dataset/3ef8750a-e42a-4cf3-8f6f-f8c140253a41/bristol-city-council-inspire-wms",
-          "name": "Bristol City Council INSPIRE map service",
-          "description": "Web Map Service (WMS) providing access to INSPIRE datasets held by Bristol City Council. This service replicates the individual datasets listed under data.gov.uk. NOTE: Upon accessing the Licensed Data you will be deemed to have accepted the terms of the Public Sector End User Licence - INSPIRE. [View dataset on data.gov.uk](https://data.gov.uk/dataset/3ef8750a-e42a-4cf3-8f6f-f8c140253a41/bristol-city-council-inspire-wms)",
-          "url": "http://maps.bristol.gov.uk/arcgis/services/ext/INSPIRE/MapServer/WMSServer?service=WMS&request=GetCapabilities"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "id": "https://data.gov.uk/dataset/e6a5a388-da62-4c3e-b19e-ad9b578f8669/bristol-city-council-datagov-wms",
-          "name": "Bristol City Council data.gov.uk map service",
-          "description": "Web Map Service (WMS) providing access to datasets held by Bristol City Council. This service replicates the individual datasets listed under data.gov.uk. NOTE: Includes some Ordnance Survey data released under presumption to publish. Please include the acknowledgement 'Contains OS data © Crown copyright and database rights, year of issue'. [View dataset on data.gov.uk](https://data.gov.uk/dataset/e6a5a388-da62-4c3e-b19e-ad9b578f8669/bristol-city-council-datagov-wms)",
-          "url": "http://maps.bristol.gov.uk/arcgis/services/ext/datagov/MapServer/WMSServer?service=WMS&request=GetCapabilities"
-        }
-      ]
-    },
-    {
-      "type": "group",
-      "id": "south-gloucestershire-wms",
-      "name": "South Gloucestershire",
-      "description": "Geospatial data published by South Gloucestershire Council",
-      "items": [
-        {
-          "type": "wms-getCapabilities",
-          "dataCustodian": "South Gloucestershire Council",
-          "id": "https://data.gov.uk/dataset/6a040b02-77e9-49f1-91de-8474b03cf11f/continuousmonitoringstations_sg",
-          "name": "Continuous Monitoring Stations",
-          "description": "Local air quality monitoring stations that continuously monitor various pollutants including nitrogen dioxide, particulate matter (PM10) and ozone within the Local Air Quality Management (LAQM) framework.\n[View dataset on data.gov.uk](https://data.gov.uk/dataset/6a040b02-77e9-49f1-91de-8474b03cf11f/continuousmonitoringstations_sg)",
-          "url": "http://inspire.misoportal.com/geoserver/south_gloucestershire_continuous_monitoring_stations/wms?request=getCapabilities"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "dataCustodian": "South Gloucestershire Council",
-          "id": "https://data.gov.uk/dataset/aa7197b9-b204-4a6c-873b-9c5b6854fcef/openspacesportandrecreation_sg",
-          "name": "Open Space Sport And Recreation",
-          "description": "Open Spaces Sport And Recreation Areas within South Gloucestershire, including parks, playing fields, allotments.\n[View dataset on data.gov.uk](https://data.gov.uk/dataset/aa7197b9-b204-4a6c-873b-9c5b6854fcef/openspacesportandrecreation_sg)",
-          "url": "http://inspire.misoportal.com/geoserver/south_gloucestershire_openspacesportandrecreation/wms?request=getCapabilities"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "dataCustodian": "South Gloucestershire Council",
-          "id": "https://data.gov.uk/dataset/015ef75b-d980-477d-af07-4e245d635b83/townandvillagegreens_sg",
-          "name": "Town And Village Greens",
-          "description": "Town and Village Greens within South Gloucestershire.\n[View dataset on data.gov.uk](https://data.gov.uk/dataset/015ef75b-d980-477d-af07-4e245d635b83/townandvillagegreens_sg)",
-          "url": "http://inspire.misoportal.com/geoserver/south_gloucestershire_townandvillagegreens/wms?request=getCapabilities"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "dataCustodian": "South Gloucestershire Council",
-          "id": "https://data.gov.uk/dataset/23db992f-d372-4a98-9301-6f1ab9710a4e/mineralresourceareas_sg",
-          "name": "Mineral Resource Areas",
-          "description": "Mineral Resource Areas within South Gloucestershire.\n[View dataset on data.gov.uk](https://data.gov.uk/dataset/23db992f-d372-4a98-9301-6f1ab9710a4e/mineralresourceareas_sg)",
-          "url": "http://inspire.misoportal.com/geoserver/south_gloucestershire_mineralresourceareas/wms?request=getCapabilities"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "dataCustodian": "South Gloucestershire Council",
-          "id": "https://data.gov.uk/dataset/b1661966-0891-4d56-80ef-066d8d3c6ff7/corestrategyareasoa-definitions_sg",
-          "name": "Core Strategy Areas OA-Definitions",
-          "description": "Core Strategy Areas OA-Definitions.\n[View dataset on data.gov.uk](https://data.gov.uk/dataset/b1661966-0891-4d56-80ef-066d8d3c6ff7/corestrategyareasoa-definitions_sg)",
-          "url": "http://inspire.misoportal.com/geoserver/south_gloucestershire_core_strategy_areas_oa_definitions/wms?request=getCapabilities"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "dataCustodian": "South Gloucestershire Council",
-          "id": "https://data.gov.uk/dataset/da37cf50-bb57-4d98-a788-8c18dd4d18c4/policeneighbourhoodbeats_sg",
-          "name": "Police Neighbourhood Beats",
-          "description": "Police Neighbourhood Beats throughout South Gloucestershire created in 2007. Every street in South Gloucestershire is allocated a local beat team based upon the areas.\n[View dataset on data.gov.uk](https://data.gov.uk/dataset/da37cf50-bb57-4d98-a788-8c18dd4d18c4/policeneighbourhoodbeats_sg)",
-          "url": "http://inspire.misoportal.com/geoserver/south_gloucestershire_policeneighbourhoodbeats/wms?request=getCapabilities"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "dataCustodian": "South Gloucestershire Council",
-          "id": "https://data.gov.uk/dataset/f6705aae-72dd-4387-91f9-e7d15b30c071/allotments_sg",
-          "name": "Allotments",
-          "description": "South Gloucestershire Council maintained Allotment areas.\n[View dataset on data.gov.uk](https://data.gov.uk/dataset/f6705aae-72dd-4387-91f9-e7d15b30c071/allotments_sg)",
-          "url": "http://inspire.misoportal.com/geoserver/south_gloucestershire_allotments1/wms?request=getCapabilities"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "dataCustodian": "South Gloucestershire Council",
-          "id": "https://data.gov.uk/dataset/27d322a5-a144-4a96-9d06-4545f42308ae/priorityneighbourhoods_sg",
-          "name": "Priority Neighbourhoods",
-          "description": "Priority Neighbourhoods within South Gloucestershire.\n[View dataset on data.gov.uk](https://data.gov.uk/dataset/27d322a5-a144-4a96-9d06-4545f42308ae/priorityneighbourhoods_sg)",
-          "url": "http://inspire.misoportal.com/geoserver/south_gloucestershire_priorityneighbourhoods/wms?request=getCapabilities"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "dataCustodian": "South Gloucestershire Council",
-          "id": "https://data.gov.uk/dataset/05647cf0-fe43-439f-b1ff-b8635eefe7ba/section106agreement_sg",
-          "name": "Section 106 Agreement",
-          "description": "Section 106 Planning Agreement - These agreements may impose restrictions on the land, or impose positive obligations upon the landowner, developer or public authority to carry out certain specified works.\n[View dataset on data.gov.uk](https://data.gov.uk/dataset/05647cf0-fe43-439f-b1ff-b8635eefe7ba/section106agreement_sg)",
-          "url": "http://inspire.misoportal.com/geoserver/south_gloucestershire_section106agreement/wms?request=getCapabilities"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "dataCustodian": "South Gloucestershire Council",
-          "id": "https://data.gov.uk/dataset/a2fc1895-16e0-4909-a563-d3926f38be15/publiclyownedassets_sg",
-          "name": "Publicly Owned Assets",
-          "description": "Property assets owned by public bodies within South Gloucestershire. compiled for Total Place project. Not an exhaustive list of all assets.\n[View dataset on data.gov.uk](https://data.gov.uk/dataset/a2fc1895-16e0-4909-a563-d3926f38be15/publiclyownedassets_sg)",
-          "url": "http://inspire.misoportal.com/geoserver/south_gloucestershire_publiclyownedassets/wms?request=getCapabilities"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "dataCustodian": "South Gloucestershire Council",
-          "id": "https://data.gov.uk/dataset/6fcd0a4c-0138-46df-b5f2-a9ced04cccfd/corestrategiesruralarea_sg",
-          "name": "Core Strategies Rural Area",
-          "description": "Core Strategy areas within South Gloucestershire 2012.\n[View dataset on data.gov.uk](https://data.gov.uk/dataset/6fcd0a4c-0138-46df-b5f2-a9ced04cccfd/corestrategiesruralarea_sg)",
-          "url": "http://inspire.misoportal.com/geoserver/south_gloucestershire_core_strategies_rural_area/wms?request=getCapabilities"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "dataCustodian": "South Gloucestershire Council",
-          "id": "https://data.gov.uk/dataset/134e027f-9439-43ed-919d-3db7c138a248/smokecontrolareas_sg",
-          "name": "Smoke Control Areas",
-          "description": "Areas covered by Smoke Control Orders restricting the type of fuel burnt in domestic homes.\n[View dataset on data.gov.uk](https://data.gov.uk/dataset/134e027f-9439-43ed-919d-3db7c138a248/smokecontrolareas_sg)",
-          "url": "http://inspire.misoportal.com/geoserver/south_gloucestershire_smokecontrolareas1/wms?request=getCapabilities"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "dataCustodian": "South Gloucestershire Council",
-          "id": "https://data.gov.uk/dataset/edc83e3c-7346-419f-a3d6-e82fa67f2bf3/roadschemeproposals_sg",
-          "name": "Road Scheme Proposals",
-          "description": "Road Scheme Proposals within South Gloucestershire.\n[View dataset on data.gov.uk](https://data.gov.uk/dataset/edc83e3c-7346-419f-a3d6-e82fa67f2bf3/roadschemeproposals_sg)",
-          "url": "http://inspire.misoportal.com/geoserver/south_gloucestershire_roadschemeproposals/wms?request=getCapabilities"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "dataCustodian": "South Gloucestershire Council",
-          "id": "https://data.gov.uk/dataset/1de07771-5a27-4f72-b73e-523b6ce3feff/article4direction_sg",
-          "name": "Article 4 Direction",
-          "description": "Direction to remove Permitted Development rights.\n[View dataset on data.gov.uk](https://data.gov.uk/dataset/1de07771-5a27-4f72-b73e-523b6ce3feff/article4direction_sg)",
-          "url": "http://inspire.misoportal.com/geoserver/south_gloucestershire_article4direction/wms?request=getCapabilities"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "dataCustodian": "South Gloucestershire Council",
-          "id": "https://data.gov.uk/dataset/28bb08b8-3663-4737-91c7-54ba08113b61/landscapecharacterarea_sg",
-          "name": "Landscape Character Area",
-          "description": "Provides a statement of the existing character of the landscapes of South Gloucestershire broken down into 21 areas in 8 groups.\n[View dataset on data.gov.uk](https://data.gov.uk/dataset/28bb08b8-3663-4737-91c7-54ba08113b61/landscapecharacterarea_sg)",
-          "url": "http://inspire.misoportal.com/geoserver/south_gloucestershire_landscapecharacterarea/wms?request=getCapabilities"
         }
       ]
     }
