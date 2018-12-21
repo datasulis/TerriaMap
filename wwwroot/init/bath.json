@@ -71,6 +71,12 @@
     },
     {
       "type": "group",
+      "id": "banes-geographic-data",
+      "name": "Bath: Hacked B&NES Geographic Data Collection",
+      "items": []
+    },
+    {
+      "type": "group",
       "id": "bath",
       "name": "Bath & North East Somerset",
       "description": "Geospatial data about Bath & North East Somerset",
